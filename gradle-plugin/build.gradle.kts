@@ -19,8 +19,11 @@ version = property("unito.version")!!
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    implementation(project(":core"))
     implementation(gradleApi())
+
+    implementation(project(":core"))
+    implementation(project(":reporter:html"))
+    implementation(project(":parser:violations"))
 }
 
 tasks.withType<KotlinCompile> {

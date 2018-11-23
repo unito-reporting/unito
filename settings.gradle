@@ -1,2 +1,4 @@
 include ':core'
 include ':gradle-plugin'
+include ':reporter:html'
+include ':parser:violations'
