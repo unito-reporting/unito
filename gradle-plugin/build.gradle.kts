@@ -14,9 +14,6 @@ gradlePlugin {
     }
 }
 
-group = property("unito.group")!!
-version = property("unito.version")!!
-
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
     implementation(gradleApi())
