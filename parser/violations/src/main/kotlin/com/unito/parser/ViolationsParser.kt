@@ -11,8 +11,8 @@ import java.io.File
 class ViolationsParser : IssueParser {
 
     private val parsers = listOf(
-        Parser.CHECKSTYLE to ".*/detekt/.*\\.xml$",
-        Parser.ANDROIDLINT to ".*/lint/.*\\.xml$"
+        Parser.CHECKSTYLE to ".*/reports/detekt/.*\\.xml$",
+        Parser.ANDROIDLINT to ".*/lint-results-.*\\.xml$"
     )
 
     override fun discoverIssues(projectDirectory: File): List<Issue> {

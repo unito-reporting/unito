@@ -10,8 +10,8 @@ plugins {
 }
 ```
 
-2. Run build with the `--unito` option:
+2. Run build with the `-Punito` option:
 
 ```bash
-./gradlew lintDebug detektCheck --unito
+./gradlew lintDebug detektCheck -Punito
 ```

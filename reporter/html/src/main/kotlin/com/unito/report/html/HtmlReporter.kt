@@ -13,7 +13,7 @@ class HtmlReporter : Reporter {
         val reportFile = File(outputDirectory, FILE_NAME)
 
         result.issues.forEach {
-            reportFile.writeText("""${it.title} ${it.description}""")
+            reportFile.appendText("""[!] ${it.title} ${it.description}\n""")
         }
     }
 
