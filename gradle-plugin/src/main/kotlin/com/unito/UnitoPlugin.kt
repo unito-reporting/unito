@@ -3,6 +3,7 @@ package com.unito
 import com.unito.model.Issue
 import com.unito.model.Result
 import com.unito.parser.ViolationsParser
+import com.unito.report.ReporterContext
 import com.unito.report.html.HtmlReporter
 import org.gradle.BuildListener
 import org.gradle.BuildResult
@@ -59,7 +60,7 @@ class UnitoPlugin : Plugin<Project> {
         val reportDirectory = File(File(buildDir, "unito"), reporter.name)
         reportDirectory.mkdirs()
 
-        reporter.render(Result(issues), reportDirectory)
+        reporter.render(ReporterContext(Result(issues), reportDirectory))
     }
 
     private fun Project.isUnitoEnabled() = hasProperty("unito")

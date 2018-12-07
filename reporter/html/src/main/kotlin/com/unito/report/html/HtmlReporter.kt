@@ -1,7 +1,7 @@
 package com.unito.report.html
 
-import com.unito.model.Result
 import com.unito.report.Reporter
+import com.unito.report.ReporterContext
 import java.io.File
 
 class HtmlReporter : Reporter {
@@ -9,10 +9,10 @@ class HtmlReporter : Reporter {
     override val name: String
         get() = "html"
 
-    override fun render(result: Result, outputDirectory: File) {
-        val reportFile = File(outputDirectory, FILE_NAME)
+    override fun render(context: ReporterContext) {
+        val reportFile = File(context.outputDirectory, FILE_NAME)
 
-        result.issues.forEach {
+        context.result.issues.forEach {
             reportFile.appendText("""[!] ${it.title} ${it.description}\n""")
         }
     }
