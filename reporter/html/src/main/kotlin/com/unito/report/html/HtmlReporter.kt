@@ -15,9 +15,12 @@ class HtmlReporter : Reporter {
         context.result.issues.forEach {
             reportFile.appendText("""[!] ${it.title} ${it.description}\n""")
         }
+
+//        val templateArchive = File(javaClass.getResource("web-template.zip").file)
+//        unpack(templateArchive, context.outputDirectory)
     }
 
     companion object {
-        private const val FILE_NAME = "index.html"
+        private const val FILE_NAME = "data.json"
     }
 }
