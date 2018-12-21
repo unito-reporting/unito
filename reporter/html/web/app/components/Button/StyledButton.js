@@ -1,9 +1,4 @@
-import styled from 'styled-components';
+import Button from '@material/react-button';
+import '@material/react-button/dist/button.css';
 
-import buttonStyles from './buttonStyles';
-
-const StyledButton = styled.button`
-  ${buttonStyles};
-`;
-
-export default StyledButton;
+export default Button;

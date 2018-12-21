@@ -1,31 +1,27 @@
-import { createGlobalStyle } from 'styled-components';
+import {createGlobalStyle} from 'styled-components';
+import fonts from './fonts/font.css';
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle(`
   html,
   body {
     height: 100%;
     width: 100%;
+    background: #eceff1;
   }
 
   body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  }
-
-  body.fontLoaded {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
   #app {
-    background-color: #fafafa;
     min-height: 100%;
     min-width: 100%;
   }
 
   p,
   label {
-    font-family: Georgia, Times, 'Times New Roman', serif;
     line-height: 1.5em;
   }
-`;
+` + fonts);
 
 export default GlobalStyle;

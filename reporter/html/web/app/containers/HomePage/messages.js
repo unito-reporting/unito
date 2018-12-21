@@ -8,9 +8,9 @@ import { defineMessages } from 'react-intl';
 export const scope = 'boilerplate.containers.HomePage';
 
 export default defineMessages({
-  startProjectHeader: {
-    id: `${scope}.start_project.header`,
-    defaultMessage: 'Start your next react project in seconds',
+  issueCountOverview: {
+    id: `unito.overview.header.issue_count`,
+    defaultMessage: '{number} issues found',
   },
   startProjectMessage: {
     id: `${scope}.start_project.message`,
@@ -23,7 +23,7 @@ export default defineMessages({
   },
   trymeMessage: {
     id: `${scope}.tryme.message`,
-    defaultMessage: 'Show Github repositories by',
+    defaultMessage: 'Show Github issues by',
   },
   trymeAtPrefix: {
     id: `${scope}.tryme.atPrefix`,

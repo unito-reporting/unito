@@ -7,6 +7,7 @@ import se.bjurr.violations.lib.ViolationsApi
 import se.bjurr.violations.lib.model.SEVERITY
 import se.bjurr.violations.lib.reports.Parser
 import java.io.File
+import java.util.UUID
 
 class ViolationsParser : IssueParser {
 
@@ -28,6 +29,7 @@ class ViolationsParser : IssueParser {
 
         return violations.map { violation ->
             Issue(
+                id = UUID.randomUUID().toString(),
                 location = violation.file?.let { file ->
                     Location(file)
                 },

@@ -11,18 +11,18 @@
  */
 import { fromJS } from 'immutable';
 
-import { CHANGE_USERNAME } from './constants';
+import { HIDE_ISSUE } from './constants';
 
 // The initial state of the App
 export const initialState = fromJS({
-  username: '',
+  issueToHide: '',
 });
 
 function homeReducer(state = initialState, action) {
   switch (action.type) {
-    case CHANGE_USERNAME:
-      // Delete prefixed '@' from the github username
-      return state.set('username', action.name.replace(/@/gi, ''));
+    case HIDE_ISSUE:
+      // Delete prefixed '@' from the github issueToHide
+      return state.set('issueToHide', action.id);
     default:
       return state;
   }

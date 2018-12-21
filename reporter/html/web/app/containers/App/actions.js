@@ -15,45 +15,24 @@
  *    }
  */
 
-import { LOAD_REPOS, LOAD_REPOS_SUCCESS, LOAD_REPOS_ERROR } from './constants';
+import { LOAD_ISSUES, LOAD_ISSUES_SUCCESS, LOAD_ISSUES_ERROR } from './constants';
 
-/**
- * Load the repositories, this action starts the request saga
- *
- * @return {object} An action object with a type of LOAD_REPOS
- */
-export function loadRepos() {
+export function loadIssues() {
   return {
-    type: LOAD_REPOS,
+    type: LOAD_ISSUES,
   };
 }
 
-/**
- * Dispatched when the repositories are loaded by the request saga
- *
- * @param  {array} repos The repository data
- * @param  {string} username The current username
- *
- * @return {object}      An action object with a type of LOAD_REPOS_SUCCESS passing the repos
- */
-export function reposLoaded(repos, username) {
+export function issuesLoaded(issues) {
   return {
-    type: LOAD_REPOS_SUCCESS,
-    repos,
-    username,
+    type: LOAD_ISSUES_SUCCESS,
+    issues: issues
   };
 }
 
-/**
- * Dispatched when loading the repositories fails
- *
- * @param  {object} error The error
- *
- * @return {object}       An action object with a type of LOAD_REPOS_ERROR passing the error
- */
-export function repoLoadingError(error) {
+export function issuesLoadingError(error) {
   return {
-    type: LOAD_REPOS_ERROR,
+    type: LOAD_ISSUES_ERROR,
     error,
   };
 }
