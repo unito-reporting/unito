@@ -17,11 +17,12 @@ class HtmlReporter : Reporter {
             reportFile.appendText("""[!] ${it.title} ${it.description}\n""")
         }
 
-        val templateArchive = File(javaClass.getResource("web-template.zip").file)
-        unpack(templateArchive, context.outputDirectory)
+        val stream = javaClass.getResourceAsStream(WEB_ARCHIVE_RESOURCE_PATH)
+        unpack(stream, context.outputDirectory)
     }
 
     companion object {
         private const val FILE_NAME = "data.json"
+        private const val WEB_ARCHIVE_RESOURCE_PATH = "/resources/web-template.zip"
     }
 }
