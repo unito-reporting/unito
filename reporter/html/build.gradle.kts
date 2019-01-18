@@ -9,6 +9,7 @@ dependencies {
     api(project(":core"))
     api(project(":core"))
     implementation("org.zeroturnaround:zt-zip:1.13")
+    implementation("com.google.code.gson:gson:2.8.5")
 }
 
 sourceSets {
